@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
+import { Key } from "ts-key-enum";
+
 const useKey = (
-  targetKey: string,
+  targetKey: Key,
   onChange: (pressed: boolean, event: KeyboardEvent) => void
 ): boolean => {
   const [keyPressed, setKeyPressed] = useState<boolean>(false);
