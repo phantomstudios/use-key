@@ -26,7 +26,7 @@ useKey("Escape", (pressed: boolean) => {
 });
 ```
 
-To listen for key combinations:
+To listen to key modifiers:
 
 ```jsx
 import useKey from "@phntms/use-key";
