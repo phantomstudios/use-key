@@ -1,22 +1,24 @@
 {
-  "name": "@phntms/PACKAGE-NAME",
-  "description": "Description, same as overview one-liner from README.md.",
+  "name": "@phntms/use-key",
+  "description": "A simple React hook for listening to custom keyboard events.",
   "version": "0.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/phantomstudios/PACKAGE-NAME#readme",
+  "homepage": "https://github.com/phantomstudios/use-key#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/phantomstudios/PACKAGE-NAME.git"
+    "url": "https://github.com/phantomstudios/use-key.git"
   },
   "bugs": {
-    "url": "https://github.com/phantomstudios/PACKAGE-NAME/issues"
+    "url": "https://github.com/phantomstudios/use-key/issues"
   },
   "keywords": [
     "react",
     "hooks",
     "hook",
-    "react-hook"
+    "react-hook",
+    "listener",
+    "keyboard"
   ],
   "scripts": {
     "build": "tsc",
@@ -34,7 +36,7 @@
     "fix:format": "prettier \"**/*.{md,html,yaml,yml}\" --write",
     "depcheck": "npx npm-check --update"
   },
-  "author": "John Chipps-Harding (john.chipps-harding@phntms.com)",
+  "author": "Paulo Ferreira Jorge (paulo.jorgeohn@phntms.com)",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0"
@@ -65,6 +67,5 @@
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
-  },
-  "dependencies": {}
+  }
 }
