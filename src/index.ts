@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 const useKey = (
   targetKey: string,
   onChange: (pressed: boolean, event: KeyboardEvent) => void
-) => {
-  const [keyPressed, setKeyPressed] = useState<boolean>();
+): boolean => {
+  const [keyPressed, setKeyPressed] = useState<boolean>(false);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
