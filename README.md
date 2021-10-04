@@ -1,90 +1,54 @@
-# PACKAGE-NAME
+# use-key
 
 [![NPM version][npm-image]][npm-url]
 [![Actions Status][ci-image]][ci-url]
 [![PR Welcome][npm-downloads-image]][npm-downloads-url]
 
-Package one-liner overview.
-
-## Introduction
-
-Package introduction, couple of paragraphs.
-
-```javascript
-import useLibrary from "@phntms/PACKAGE-NAME";
-
-const { something } = useLibrary({
-  argument1: "something",
-  argument2: "something else",
-});
-```
+A simple React hook for listening to custom keyboard events. This hook is also SSR safe and does not break when used without `window` existing.
 
 ## Installation
 
 Install this package with `npm`.
 
 ```bash
-npm i @phntms/PACKAGE-NAME
+npm i -D @phntms/use-key
 ```
 
 ## Usage
 
-Example 1 description.
+To listen to a single key:
 
-```JSX
-import React from 'react';
-import useLibrary from '@phntms/PACKAGE-NAME';
+```jsx
+import useKey from "@phntms/use-key";
 
-const SomeExample = () = {
-  const { something } = useApi({
-    argument1: "something",
-    argument2: "something else",
-  });
-
-  return (
-    <>
-      <h1>Result</h2>
-      <p>{something}</p>
-    </>
-  );
-}
+useKey("Escape", (pressed: boolean) => {
+  if (pressed) // Do something on "Escape"...
+});
 ```
 
-Example 2 description.
+To listen to key modifiers:
 
-```JSX
-import React from 'react';
-import useLibrary from '@phntms/PACKAGE-NAME';
+```jsx
+import useKey from "@phntms/use-key";
 
-const SomeExample2 = () = {
-  const { something } = useApi({
-    argument1: "something",
-    argument2: "something else",
-  });
-
-  return (
-    <>
-      <h1>Result</h2>
-      <p>{something}</p>
-    </>
-  );
-}
+useKey("g", (pressed: boolean, event: KeyboardEvent) => {
+  if (pressed && event.ctrlKey) // Do something on "Ctrl + G"...
+});
 ```
 
 ## API
 
-### Input
+The hook uses [KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) under the hood. This means using the `onChange` event, you can get the state of modifier keys such as Shift as well as the keyboard locale and layout.
 
-- `argument1` : Required - Description of argument.
-- `argument2` : Optional - Description of argument.
+## Contributing
 
-### Output
+Want to get involved, or found an issue? Please contribute using the GitHub Flow. Create a branch, add commits, and open a Pull Request or submit a new issue.
 
-- `something`: Description of output.
+Please read `CONTRIBUTING` for details on our `CODE_OF_CONDUCT`, and the process for submitting pull requests to us!
 
-[npm-image]: https://img.shields.io/npm/v/@phntms/PACKAGE-NAME.svg?style=flat-square&logo=react
-[npm-url]: https://npmjs.org/package/@phntms/PACKAGE-NAME
-[npm-downloads-image]: https://img.shields.io/npm/dm/@phntms/PACKAGE-NAME.svg
-[npm-downloads-url]: https://npmcharts.com/compare/@phntms/PACKAGE-NAME?minimal=true
-[ci-image]: https://github.com/phantomstudios/PACKAGE-NAME/workflows/test/badge.svg
-[ci-url]: https://github.com/phantomstudios/PACKAGE-NAME/actions
+[npm-image]: https://img.shields.io/npm/v/@phntms/use-key.svg?style=flat-square&logo=react
+[npm-url]: https://npmjs.org/package/@phntms/use-key
+[npm-downloads-image]: https://img.shields.io/npm/dm/@phntms/use-key.svg
+[npm-downloads-url]: https://npmcharts.com/compare/@phntms/use-key?minimal=true
+[ci-image]: https://github.com/phantomstudios/use-key/workflows/test/badge.svg
+[ci-url]: https://github.com/phantomstudios/use-key/actions
