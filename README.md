@@ -11,7 +11,7 @@ A simple React hook for listening to custom keyboard events. This hook is also S
 Install this package with `npm`.
 
 ```bash
-npm i -D @phntms/use-key
+npm i @phntms/use-key
 ```
 
 ## Usage
