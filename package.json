@@ -1,7 +1,7 @@
 {
   "name": "@phntms/use-key",
   "description": "A simple React hook for listening to custom keyboard events.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "homepage": "https://github.com/phantomstudios/use-key#readme",
