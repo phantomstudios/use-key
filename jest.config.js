@@ -2,7 +2,6 @@
  * @type {jest.ProjectConfig}
  */
 module.exports = {
-  roots: ["<rootDir>/test"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
