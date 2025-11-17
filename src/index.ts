@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const useKey = (
   targetKey: string,
-  onChange: (pressed: boolean, event: KeyboardEvent) => void
+  onChange: (pressed: boolean, event: KeyboardEvent) => void,
 ) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
